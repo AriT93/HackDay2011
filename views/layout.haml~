@@ -15,12 +15,16 @@
       .full#masthead
         %h1
           %a{:href => '/'}= SiteConfig.title
-      #navblock
-        .fifth.text_center.top_nav
-        .fifth.text_center.top_nav
-        .fifth.text_center.top_nav
-        .fifth.text_center.top_nav
-        .fifth.text_center.top_nav
+      .fifth.text_center
+        1
+      .fifth.text_center.bg_darkblue
+        2
+      .fifth.text_center.bg_darkblue
+        3
+      .fifth.text_center.bg_darkblue
+        4
+      .fifth.text_center.bg_darkblue
+        5
       .threequarter.vpad_10= yield
       .full.text_center.vpad_20
         %p#legal= "&mdash; &copy; #{Time.now.strftime('%Y')} #{SiteConfig.author} &mdash;"

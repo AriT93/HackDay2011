@@ -1,0 +1,8 @@
+.full.text_center
+  %h2 Main Page
+.half.text_center
+  %p Here is some text.
+.fifth.last.text_center
+  %p Here is a <a href='/'>link</a>.
+.threequarter
+  %p ttys!

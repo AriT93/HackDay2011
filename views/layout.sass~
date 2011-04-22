@@ -1,0 +1,11 @@
+$bkgColor: #FFFFFF
+
+*
+  font-family: sans-serif
+  background-color: white
+html
+  background-color: $bkgColor
+BODY
+  font-famil: helvetica, sans-serif
+#masthead
+  height: 200px

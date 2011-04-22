@@ -15,7 +15,6 @@ end
 
 namespace :db do
   desc 'Auto-migrate the database (destroys data)'
-
   task :migrate => :environment do
     DataMapper.auto_migrate!
   end
