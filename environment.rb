@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'sinatra'
 require 'dm-core'
 require 'dm-timestamps'
 require 'dm-validations'
@@ -10,7 +11,6 @@ require 'haml'
 require 'sass'
 require 'rack-flash'
 require 'ostruct'
-require 'sinatra'
 
 use Rack::Session::Cookie, :secret=>"supahsekrit is the bestes sekrit"
 use Rack::Flash
