@@ -1,0 +1,6 @@
+Feature: Navigation to the home page
+
+  Scenario: Main Page
+    Given I am on the home page
+    When I go to the home page
+    Then I should see "Login"
