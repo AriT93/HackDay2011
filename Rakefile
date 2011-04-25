@@ -1,15 +1,14 @@
-require 'spec/rake/spectask'
+require 'rspec/core/rake_task'
 
 task :default => :test
 task :test => :spec
 
-if !defined?(Spec)
+if !defined?(RSpec)
   puts "spec targets require RSpec"
 else
   desc "Run all examples"
-  Spec::Rake::SpecTask.new('spec') do |t|
-    t.spec_files = FileList['spec/**/*.rb']
-    t.spec_opts = ['-cfs']
+  RSpec::Core::RakeTask.new() do |t|
+    t.pattern = "spec/**/*.rb"
   end
 end
 
