@@ -7,6 +7,8 @@ require File.join(File.dirname(__FILE__), '..', '..', 'application.rb')
 require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
+DataMapper.setup(:default, "sqlite3::memory:")
+DataMapper.auto_migrate!
 
 Capybara.app = Sinatra::Application
 

@@ -17,6 +17,10 @@ helpers do
   # add your helpers here
 end
 
+get '/login' do
+  haml :login
+end
+
 # root page
 get '/' do
   redirect '/login' unless logged_in?

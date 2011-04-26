@@ -13,8 +13,9 @@ require 'rack/test'
 require 'application'
 
 # establish in-memory database for testing
-#DataMapper.setup(:default, "sqlite3::memory:")
-DataMapper.setup(:default, (ENV["DATABASE_URL"] || "sqlite3://#{File.expand_path(File.dirname(__FILE__))}/#{Sinatra::Base.environment}.db"))
+DataMapper.setup(:default, "sqlite3::memory:")
+#DataMapper.auto_migrate!
+#DataMapper.setup(:default, (ENV["DATABASE_URL"] || "sqlite3://#{File.expand_path(File.dirname(__FILE__))}/#{Sinatra::Base.environment}.db"))
 
 module RSpecMixinExample
   include Rack::Test::Methods

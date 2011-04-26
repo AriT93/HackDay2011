@@ -1,0 +1,16 @@
+#sinatra_authentication
+  %h1 Login here
+  %form{:action => "/login" :method => "post"}
+    .field
+      .label
+        %label{:for => "user_email"}
+          %h2 Email
+      %input{:id => "user_email", :name => "email", :type => "text"}
+    .field
+      .label
+        %label{:for => "user_password"}
+          %h2 Password
+      %input{:id => "user_password", :name => "password" :type => "password"}
+    .buttons
+      %input{:type => "submit", :value => "Login"}
+      %a.sinatra_authentication_link{:href => "/signup"} Sign Up

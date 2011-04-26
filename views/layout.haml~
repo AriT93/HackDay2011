@@ -24,3 +24,4 @@
       .threequarter.vpad_10= yield
       .full.text_center.vpad_20
         %p#legal= "&mdash; &copy; #{Time.now.strftime('%Y')} #{SiteConfig.author} &mdash;"
+        %a{:href => '/logout'}Logout

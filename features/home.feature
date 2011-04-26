@@ -10,12 +10,25 @@ Feature: Navigation to the home page, logging in and logging out
     Then I should see "Login"
 
 
-  Scenario: Login
+  Scenario: Login as unknown
     Given I am on the home page
     And I should see "Login"
     And I fill in "test@example.org" for "email"
     And I fill in "password" for "password"
     When I press "Login"
+    Then I should see "incorrect"
+
+  Scenario: Go To Signup
+    Given I am on the home page
+    And I follow "Sign up"
+    Then I should see "Sign Up"
+
+  Scenario: Sign up
+    Given I am on the signup page
+    And I fill in "test@example.org" for "user_email"
+    And I fill in "password" for "user_password"
+    And I fill in "password" for "user_password_confirmation"
+    And I press "Sign up"
     Then I should see "Main Page"
 
   Scenario: Logout

@@ -1,11 +1,19 @@
-$bkgColor: #FFFFFF
+$bkgColor: #dcdcdc
 
 *
   font-family: sans-serif
-  background-color: white
+  background-color: $bkgColor
 html
   background-color: $bkgColor
 BODY
   font-famil: helvetica, sans-serif
+  background-color: $bkgColor
 #masthead
   height: 200px
+.top_nav
+  height: 15px
+  background-color: lightgreen
+#navblock
+  clear: both
+  background-color: lightgreen
+  height: 20px
