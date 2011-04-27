@@ -11,6 +11,9 @@ require 'rspec'
 DataMapper.setup(:default, "sqlite3::memory:")
 DataMapper.auto_migrate!
 
+# w = Workgroup.new(:workgroup_number => "WG99999")
+# w.save
+
 Capybara.app = Sinatra::Application
 
 class ChangeAppWorld

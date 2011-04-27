@@ -1,4 +1,4 @@
-require 'spec/rake/spectask'
+require 'rspec/core/rake_task'
 
 task :default => :test
 task :test => :spec
@@ -8,9 +8,7 @@ if !defined?(RSpec)
 else
   desc "Run all examples"
   RSpec::Core::RakeTask.new() do |t|
-#    t.spec_files = FileList['spec/**/*.rb']
-#    t.spec_opts = ['-cfs']
-  t.pattern = "spec/**/*.rb"
+    t.pattern = "spec/**/*.rb"
   end
 end
 

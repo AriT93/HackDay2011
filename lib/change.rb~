@@ -17,4 +17,7 @@ class Change
   def add_changenumber
     self.number ||= "CM#{'0' * (8 - Change.count.to_s.length) + (Change.count + 1).to_s}"
   end
+  def change_assign(assignee)
+    self.assigned_to = assignee
+  end
 end
