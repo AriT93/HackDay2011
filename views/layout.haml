@@ -4,12 +4,12 @@
     %title= @title || SiteConfig.title
     %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/reset.css"}
     %link{ :rel => "stylesheet", :media => "screen", :href => "css/grid960.css" }
-    %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/layout.css"}
     %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/type.css" }
     %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/tables.css" }
     %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/forms.css" }
     %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/helpers.css" }
     %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/ux.css" }
+    %link{ :rel => "stylesheet", :type =>"text/css", :href => "css/layout.css"}
   %body
     #container
       .full#masthead
@@ -18,10 +18,15 @@
       #navblock
       - if logged_in?
         .fifth.text_center.top_nav
+          %h4 change
         .fifth.text_center.top_nav
+          %h4 incident
         .fifth.text_center.top_nav
+          %h4 request
         .fifth.text_center.top_nav
+          %h4 problem
         .fifth.text_center.top_nav
+          %h4 cmdb
       .threequarter.vpad_10= yield
       .full.text_center.vpad_20
         %p#legal= "&mdash; &copy; #{Time.now.strftime('%Y')} #{SiteConfig.author} &mdash;"
